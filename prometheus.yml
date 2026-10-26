@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'smartcity360_app'
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: ['smartcity-app:3000']

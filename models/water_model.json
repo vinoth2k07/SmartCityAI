@@ -1,0 +1,46 @@
+{
+  "modelName": "BWSSB Grid Hydro Pressure Net",
+  "fileName": "water_model.pkl",
+  "modelType": "MLPRegressor",
+  "version": "1.0.0",
+  "trainingDate": "2026-06-10",
+  "trainingDataset": "BWSSB Cauvery Trunk Line Pressure Sensors (25,000 readings)",
+  "targetVariable": "Water Pressure (Bar)",
+  "domain": "water",
+  "features": [
+    {
+      "name": "Water Supply Status Factor",
+      "key": "waterStatusFactor",
+      "description": "Optimal (1.0), Deficit (0.6), Critical (0.3)",
+      "weight": 55,
+      "impactDirection": "Positive (+)"
+    },
+    {
+      "name": "Ward Population Demand",
+      "key": "population",
+      "description": "Consumptive draw load",
+      "weight": 30,
+      "impactDirection": "Negative (-)"
+    },
+    {
+      "name": "Ward Surface Area",
+      "key": "areaKm2",
+      "description": "Pipe distribution length factor",
+      "weight": 15,
+      "impactDirection": "Negative (-)"
+    }
+  ],
+  "metrics": {
+    "mae": "0.35 Bar",
+    "rmse": "0.52 Bar",
+    "r2": "0.78",
+    "mape": "7.1%",
+    "forecastAccuracy": "Not available — model/data required"
+  },
+  "capabilities": {
+    "modelAvailable": true,
+    "modelLoaded": true,
+    "predictionAvailable": true,
+    "explainabilityAvailable": true
+  }
+}

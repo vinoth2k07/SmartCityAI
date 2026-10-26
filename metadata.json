@@ -1,0 +1,6 @@
+{
+  "name": "SmartCity360",
+  "description": "Enterprise AI-Powered Digital Twin Analytics & Command Center for Bengaluru",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

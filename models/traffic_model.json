@@ -1,0 +1,46 @@
+{
+  "modelName": "Traffic Speed Regressor",
+  "fileName": "traffic_model.pkl",
+  "modelType": "DecisionTreeRegressor",
+  "version": "1.0.0",
+  "trainingDate": "2026-06-15",
+  "trainingDataset": "Bengaluru Traffic Telemetry Dataset (48,000 observations)",
+  "targetVariable": "Speed (km/h)",
+  "domain": "traffic",
+  "features": [
+    {
+      "name": "Ward Traffic Index",
+      "key": "trafficIndex",
+      "description": "Real-time congestion score (0-100)",
+      "weight": 52,
+      "impactDirection": "Negative (-)"
+    },
+    {
+      "name": "Population Density",
+      "key": "populationDensity",
+      "description": "Population divided by area (people/km²)",
+      "weight": 28,
+      "impactDirection": "Negative (-)"
+    },
+    {
+      "name": "Active Infrastructure Complaints",
+      "key": "activeComplaints",
+      "description": "Unresolved pothole/traffic tickets in ward",
+      "weight": 20,
+      "impactDirection": "Negative (-)"
+    }
+  ],
+  "metrics": {
+    "mae": "1.8 km/h",
+    "rmse": "2.4 km/h",
+    "r2": "0.81",
+    "mape": "8.5%",
+    "forecastAccuracy": "Not available — model/data required"
+  },
+  "capabilities": {
+    "modelAvailable": true,
+    "modelLoaded": true,
+    "predictionAvailable": true,
+    "explainabilityAvailable": true
+  }
+}

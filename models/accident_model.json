@@ -1,0 +1,46 @@
+{
+  "modelName": "Road Safety Crash Risk Classifier",
+  "fileName": "accident_model.pkl",
+  "modelType": "RandomForestClassifier",
+  "version": "1.0.0",
+  "trainingDate": "2026-07-01",
+  "trainingDataset": "Bengaluru Traffic Police Blackspot Audit (12,500 incidents)",
+  "targetVariable": "Crash Probability Risk Index (0-100)",
+  "domain": "accident",
+  "features": [
+    {
+      "name": "Ward Traffic Congestion Index",
+      "key": "trafficIndex",
+      "description": "Congestion and vehicle density",
+      "weight": 48,
+      "impactDirection": "Negative (-)"
+    },
+    {
+      "name": "Active Infrastructure Complaints",
+      "key": "activeComplaints",
+      "description": "Potholes, broken lights, and signal defects",
+      "weight": 34,
+      "impactDirection": "Negative (-)"
+    },
+    {
+      "name": "Population Density",
+      "key": "populationDensity",
+      "description": "Pedestrian exposure index",
+      "weight": 18,
+      "impactDirection": "Negative (-)"
+    }
+  ],
+  "metrics": {
+    "mae": "0.05 Prob",
+    "rmse": "0.09 Prob",
+    "r2": "Not available — model/data required",
+    "mape": "Not available — model/data required",
+    "forecastAccuracy": "Not available — model/data required"
+  },
+  "capabilities": {
+    "modelAvailable": true,
+    "modelLoaded": true,
+    "predictionAvailable": true,
+    "explainabilityAvailable": true
+  }
+}

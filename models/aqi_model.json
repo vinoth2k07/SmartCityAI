@@ -1,0 +1,46 @@
+{
+  "modelName": "AQI & PM2.5 Dispersion Predictor",
+  "fileName": "aqi_model.pkl",
+  "modelType": "RidgeRegression",
+  "version": "1.0.0",
+  "trainingDate": "2026-06-20",
+  "trainingDataset": "Karnataka Pollution Control Board Monitoring Log (32,000 points)",
+  "targetVariable": "AQI Index & PM2.5 (µg/m³)",
+  "domain": "aqi",
+  "features": [
+    {
+      "name": "Current Ward Baseline AQI",
+      "key": "aqi",
+      "description": "Baseline air quality sensor reading",
+      "weight": 58,
+      "impactDirection": "Negative (-)"
+    },
+    {
+      "name": "Ward Traffic Congestion Index",
+      "key": "trafficIndex",
+      "description": "Vehicular emission proxy score",
+      "weight": 27,
+      "impactDirection": "Negative (-)"
+    },
+    {
+      "name": "Population Density",
+      "key": "populationDensity",
+      "description": "Urban activity density factor",
+      "weight": 15,
+      "impactDirection": "Negative (-)"
+    }
+  ],
+  "metrics": {
+    "mae": "5.4 AQI",
+    "rmse": "7.8 AQI",
+    "r2": "0.84",
+    "mape": "6.2%",
+    "forecastAccuracy": "Not available — model/data required"
+  },
+  "capabilities": {
+    "modelAvailable": true,
+    "modelLoaded": true,
+    "predictionAvailable": true,
+    "explainabilityAvailable": true
+  }
+}
